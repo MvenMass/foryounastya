@@ -1,0 +1,44 @@
+.audio {
+  display: none;
+}
+
+.unblock {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 999px;
+  backdrop-filter: blur(12px);
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease, border 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.95rem;
+}
+
+.unblock:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.28);
+}
+
+.icon {
+  font-size: 1.1rem;
+}
+
+.text {
+  white-space: nowrap;
+}
+
+.on {
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.off {
+  border-color: rgba(255, 255, 255, 0.25);
+  opacity: 0.9;
+}

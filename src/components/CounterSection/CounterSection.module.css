@@ -1,0 +1,115 @@
+.section {
+  overflow: hidden;
+}
+
+.content {
+  max-width: 960px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.title {
+  font-size: clamp(2rem, 3.6vw, 3rem);
+  margin-bottom: 30px;
+}
+
+.since {
+  font-size: clamp(1rem, 2.2vw, 1.3rem);
+  margin-bottom: 26px;
+  opacity: 0.9;
+}
+
+.timer {
+  display: flex;
+  justify-content: space-between;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.timeCard {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 18px;
+  padding: 18px 16px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 12px 25px rgba(120, 0, 50, 0.2);
+}
+
+.number {
+  font-size: clamp(1.1rem, 3.2vw, 2.1rem);
+  font-weight: 700;
+  display: block;
+  line-height: 1.1;
+  max-width: 100%;
+  word-break: break-all;
+}
+
+.label {
+  font-size: 0.95rem;
+  opacity: 0.85;
+}
+
+.subtitle {
+  font-size: clamp(1.1rem, 2.2vw, 1.5rem);
+  font-weight: 500;
+}
+
+.floatingHearts {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.heart {
+  position: absolute;
+  bottom: -20px;
+  width: 16px;
+  height: 16px;
+  background: rgba(255, 255, 255, 0.8);
+  transform: rotate(45deg);
+  border-radius: 4px;
+  animation-name: floatUp;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.heart::before,
+.heart::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  top: -8px;
+  left: 0;
+}
+
+.heart::after {
+  left: -8px;
+  top: 0;
+}
+
+@media (max-width: 768px) {
+ .timer {
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) rotate(45deg);
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-120vh) rotate(45deg);
+    opacity: 0;
+  }
+}

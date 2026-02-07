@@ -1,0 +1,5 @@
+.app {
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #ff9db8 0%, #ff2e6d 45%, #b3003c 100%);
+  color: #fff;
+}
